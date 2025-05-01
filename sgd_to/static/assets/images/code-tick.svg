@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="45pt" height="45pt" viewBox="0 0 45 45" version="1.1">
+    <g id="surface1">
+        <!-- Updated fill color to match the second SVG -->
+        <path style="stroke:none; fill-rule:nonzero; fill:rgb(40%,86.666667%,74.509804%); fill-opacity:1;"
+              d="M 45 22.5 C 45 34.925781 34.925781 45 22.5 45 C 10.074219 45 0 34.925781 0 22.5 C 0 10.074219 10.074219 0 22.5 0 C 34.925781 0 45 10.074219 45 22.5 Z M 45 22.5 "/>
+        <!-- Updated stroke color to match the second SVG -->
+        <path style="fill:none; stroke-width:12; stroke-linecap:butt; stroke-linejoin:round; stroke:rgb(100%,100%,100%); stroke-opacity:1;"
+              d="M 31.109349 58.561583 L 44.677914 71.77685 L 78.604101 38.748232 "
+              transform="matrix(0.409091,0,0,0.409091,0,0)"/>
+    </g>
+</svg>
