@@ -1,0 +1,241 @@
+.login-form-container {
+    width: 416px;
+    margin: 0 auto;
+}
+.login-form-inner{
+    background-color: var(--secondary-color);
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    padding: 25px;
+}
+.form-headings{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 18px;
+}
+.user-bg{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #313742;
+}
+.form-headings p{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    letter-spacing: -0.01em;
+    color: var(--white);
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+}
+.input-group label{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20.25px;
+    letter-spacing: -0.005em;
+    color: var(--light-text);
+    opacity: 60%;
+}
+form.login-form {
+    margin: 40px 0 0 0;
+}
+.input-bg{
+    height: 38px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 1.6px;
+    margin: 10px 0 12px 0;
+    background-color: #3C424C;
+    transition: 0.5s ease;
+}
+.input-bg:hover{
+    background-image: var(--color-shadow);
+
+}
+.input-bg input{
+    background-color: var(--primary-color);
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    padding: 0 12px;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20.25px;
+    letter-spacing: -0.005em;
+}
+.input-group.password-input-group {
+    position: relative;
+    max-width: 400px;
+    margin: 10px 0;
+}
+.input-bg {
+    position: relative;
+}
+
+.toggle-password-type {
+    position: absolute;
+    top: 60%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.toggle-password-type img {
+    width: 17px;
+    height: 13px;
+}
+.submit-btn{
+    height: 40px;
+    text-align: center;
+    border-radius: 6px;
+    background-image: var(--color-shadow);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: -0.01em;
+    color: #0B101A;
+    cursor: pointer;
+}
+.horizontal {
+    margin: 20px 0;
+}
+.horizontal h4 {
+    display: flex;
+    flex-direction: row;
+   
+}
+.horizontal h4:before, .horizontal h4:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid #323843;
+    margin: auto;
+}
+.horizontal span {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.52px;
+    color: var(--white);
+    opacity: 70%;
+    padding: 0 10px;
+}
+.Social-link a {
+    font-size: 14px;
+    font-weight: 500;
+    align-items: center;
+    padding: 0;
+    display: inline-flex;
+    text-align: center;
+    width: 100%;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.other-links{
+    text-align: center;
+    margin: 30px 0 80px 0;
+}
+.other-links span{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20.25px;
+    letter-spacing: -0.005em;
+    color: var(--light-text);
+    opacity: 70%;
+}
+.other-links a{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20.25px;
+    letter-spacing: -0.005em;
+    color: var(--white);
+}
+
+@media screen and (max-width: 500px){
+    .shodow-active{
+        display: none;
+    }
+    .menu-btn {
+        display: none;
+    }
+    .header-container{
+        justify-content: center;
+    }
+
+}
+
+/* Add these Google sign-in button styles */
+.gsi-material-button {
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 1px solid #dadce0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #1A212D;
+    cursor: pointer;
+    font-family: "Roboto", arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    height: 38px;
+    letter-spacing: -0.01em;
+    line-height: 20px;
+    outline: none;
+    overflow: hidden;
+    padding: 0 12px;
+    position: relative;
+    text-align: center;
+    transition: background-color .218s, border-color .218s, box-shadow .218s;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+    margin-top: 0;
+}
+
+.gsi-material-button .gsi-material-button-icon {
+    height: 20px;
+    margin-right: 8px;
+    min-width: 20px;
+    width: 20px;
+}
+
+.gsi-material-button .gsi-material-button-content-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.gsi-material-button .gsi-material-button-contents {
+    flex-grow: 1;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+}
+
+.gsi-material-button:hover {
+    background-color: #f8f9fa;
+    border-color: #dadce0;
+}
+
+.gsi-material-button:focus {
+    border-color: #4285f4;
+    outline: none;
+}
+
+.gsi-material-button:active {
+    background-color: #f1f3f4;
+}
