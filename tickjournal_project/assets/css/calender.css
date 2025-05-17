@@ -1,0 +1,219 @@
+/* Calendar Styles - Updated with darker previous/next month dates */
+.calendar {
+    width: 100%;
+    background-color: #1A212D;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 15px 0;
+}
+
+.calendar-header img {
+    padding: 10px 15px;
+    border-radius: 30px;
+    background-color: #2E313F;
+    cursor: pointer;
+}
+
+.calendar-header img:last-child {
+    transform: rotate(180deg);
+}
+
+.month-year {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #2E313F;
+}
+
+.days-of-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 5px 0;
+}
+
+.day {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+    opacity: 0.7;
+    letter-spacing: 0.4px;
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 8px;
+    margin-top: 10px;
+}
+
+.date {
+    position: relative;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.2;
+    text-align: left;
+    padding: 8px 6px;
+    color: #FFFFFF;
+    background-color: #252836;
+    border-radius: 8px;
+    min-height: 80px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Date number in top-left corner */
+.date .date-number {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #fff;
+}
+
+/* Style for days from previous/next month - UPDATED */
+.date.other-month {
+    opacity: 0.3;
+    background-color: #1E2130;
+}
+
+.date.other-month .date-number {
+    color: #4A4D5E;  /* Darker color for non-current month dates */
+    opacity: 0.7;
+}
+
+/* Styles for active days with trades */
+.date.win {
+    background-color: #252836;
+    background-image: linear-gradient(135deg, rgba(82, 202, 150, 0.2), rgba(92, 198, 255, 0.1));
+}
+
+.date.loss {
+    background-color: #252836;
+    background-image: linear-gradient(135deg, rgba(255, 89, 147, 0.2), rgba(255, 116, 90, 0.1));
+}
+
+/* Today highlight */
+.date.today {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Trade info styles */
+.trade-count {
+    font-size: 11px;
+    color: #8C8C8C;
+    margin-top: 4px;
+}
+
+.pnl-amount {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 3px;
+}
+
+.pnl-amount.positive {
+    color: #52CA96;
+}
+
+.pnl-amount.negative {
+    color: #FF5993;
+}
+
+.pnl-percent {
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+/* Mobile responsiveness - improved */
+@media(max-width: 769px) {
+    .calendar {
+        padding: 10px;
+    }
+
+    .calendar-header {
+        padding-bottom: 10px;
+    }
+
+    .month-year {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .dates {
+        grid-gap: 4px;
+    }
+
+    .date {
+        min-height: 60px;
+        padding: 5px;
+    }
+
+    .date .date-number {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .trade-count {
+        font-size: 9px;
+    }
+
+    .pnl-amount {
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
+
+@media(max-width: 480px) {
+    .day {
+        font-size: 12px;
+    }
+
+    .date {
+        min-height: 50px;
+        padding: 4px;
+    }
+
+    .date .date-number {
+        font-size: 13px;
+    }
+
+    .trade-count {
+        font-size: 8px;
+        margin-top: 2px;
+    }
+
+    .pnl-amount {
+        font-size: 11px;
+        margin-top: 2px;
+    }
+
+    .pnl-percent {
+        display: none; /* Hide percentages on very small screens */
+    }
+}
+
+/* Extra small screens */
+@media(max-width: 360px) {
+    .dates {
+        grid-gap: 2px;
+    }
+
+    .date {
+        min-height: 45px;
+        padding: 3px;
+    }
+
+    .date .date-number {
+        font-size: 12px;
+    }
+}

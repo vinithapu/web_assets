@@ -1,0 +1,160 @@
+.stats-profit{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 15px;
+}
+.stats-profit2{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 15px;
+    margin: 15px 0 0 0;
+}
+.stats-card{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+}
+.stats-card p{
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    color: var(--das-text);
+}
+.stats-card h1{
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 16px;
+    color: var(--white);
+    padding: 10px 0 0 0;
+}
+.stats-card h1 span{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.4000000059604645px;
+    color: var(--das-text);
+    padding: 0 0 0 5px;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+.stats-chart{
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    margin-top: 20px;
+}
+.stats-chart h1{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    letter-spacing: -0.01em;
+    color: var(--white);
+}
+.stats-chart {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    padding: 20px 20px 0 20px;
+}
+.chart-container {
+    width: 100%;
+    max-width: 100%; 
+}
+.chart {
+    height: 100%; 
+}
+.month{
+    font-size: 14.5px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: var(--das-text); 
+}
+.chart-container {
+    position: relative;
+    width: 100%;
+    top: 10%;
+}
+.months-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    bottom: 16%;
+}
+.tags-tbl{
+    border-radius: 10px;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    width: 50%;
+    margin: 15px 0 100px 0;
+}
+.tags-tbl-main{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+.tags-tbl table{
+    width: 100%;
+}
+.tags-tbl table thead tr th{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.4000000059604645px;
+    text-align: left;
+    color: var(--das-text);
+    padding: 10px 10px 10px 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+.tags-tbl table tbody tr td{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    color: var(--white);
+    padding: 10px 10px 10px 0;
+}
+.pad-rem{
+    overflow-y: scroll;
+    overflow-x: hidden; 
+}
+@media (max-width: 769px) {
+    .content-area header{
+        width: 100%;
+    }
+    .tags-tbl-main{
+        flex-direction: column;
+        margin: 10px 0; 
+    }
+    .main-dashboard-content{
+        padding: 30px 0 60px 0;
+    }
+    .pad-rem{
+        padding: 0;
+    }
+ 
+    .tags-tbl{
+        width: 100%;
+        margin: 0;
+    }
+    .stats-profit2,
+    .stats-profit {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .months-container {
+        bottom: 12%;
+    }
+    .month {
+        font-size: 11.5px;
+    }
+    .tags-tbl table tbody tr td:nth-last-child(-n+2),
+    .tags-tbl table thead tr th:nth-last-child(-n+2){
+        display: none;
+    }
+}
+@media (max-width: 380px){
+    .month-year{
+        font-size: 12px !important;
+    }
+}
