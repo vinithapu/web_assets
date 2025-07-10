@@ -31,13 +31,13 @@ let currentIndex = 0;
 const quotes = [
     {
         image: `${staticURL}assets/media/Profile.png`,
-        text: 'TickJournal has transformed how I manage my trades. The simplicity and effectiveness are unmatched!',
+        text: 'Tickjournal has transformed how I manage my trades. The simplicity and effectiveness are unmatched!',
         clientName: 'Emily Clark',
         clientLocation: 'Trader'
     },
     {
         image: `${staticURL}assets/media/Profile.png`,
-        text: 'TickJournal has transformed how I manage my trades. The simplicity and effectiveness are unmatched!',
+        text: 'Tickjournal has transformed how I manage my trades. The simplicity and effectiveness are unmatched!',
         clientName: 'Emily Clark',
         clientLocation: 'Trader'
     },
@@ -49,7 +49,7 @@ const quotes = [
     },
     {
         image: `${staticURL}assets/media/Profile.png`,
-        text: 'TickJournal offers a seamless experience. The dashboard tracking is a lifesaver for professionals.',
+        text: 'Tickjournal offers a seamless experience. The dashboard tracking is a lifesaver for professionals.',
         clientName: 'Sophia Davis',
         clientLocation: 'Financial Advisor'
     },
