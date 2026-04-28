@@ -233,3 +233,5 @@
     .calc-tools-grid{grid-template-columns:1fr}
     .calc-tool-item{border-right:none}
 }
+.cp-silo-link{color:#5CC6FF;text-decoration:none;font-weight:500;transition:color .15s}
+.cp-silo-link:hover{color:#85FFC4;text-decoration:underline}
