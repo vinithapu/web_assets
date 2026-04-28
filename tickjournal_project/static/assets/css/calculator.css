@@ -1,0 +1,235 @@
+/* calculator.css — Tickjournal calculator app styles */
+
+/* ─── Utility ──────────────────────────────────────────── */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ─── Breadcrumb ──────────────────────────────────────────
+   Single class used across all three calculator pages.     */
+.cp-breadcrumb{display:flex;align-items:center;flex-wrap:wrap;gap:4px;font-size:12px;color:var(--das-text);margin-bottom:16px}
+.cp-breadcrumb a{color:#5CC6FF;text-decoration:none;transition:color .15s}
+.cp-breadcrumb a:hover{color:#85FFC4}
+.cp-breadcrumb .sep{color:var(--das-text);margin:0 2px}
+
+/* ─── Section cards (mirrors stock_detail.css data-card) ──
+   Defined here so calculator pages need no external CSS
+   dependency. Sizing matches stock_detail.html inline
+   style (26px title, not stock_detail.css's 18px).        */
+.data-card{
+    background-color:var(--secondary-color);
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:20px;
+    overflow:hidden;
+}
+.data-card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+    border-bottom:1px solid rgba(255,255,255,.1);
+    padding-bottom:10px;
+}
+.data-card-title{
+    font-size:26px;
+    font-weight:600;
+    color:var(--white);
+}
+
+/* ─── Tool header (inside data-card) ─────────────────────
+   Matches .stock-name sizing (28px/600) from the stock
+   detail page's inline <style> block.                      */
+.cp-tool-name{
+    font-size:28px;
+    font-weight:600;
+    color:var(--white);
+    margin:0 0 8px;
+    line-height:1.25;
+}
+.cp-tool-desc{
+    font-size:15px;
+    color:var(--das-text);
+    margin:0 0 24px;
+    line-height:1.6;
+}
+
+/* ─── Companion tabs ─────────────────────────────────────── */
+.cp-tabs{display:flex;gap:0;margin-bottom:24px;border-bottom:1px solid rgba(255,255,255,.1)}
+.cp-tab{background:none;border:none;border-bottom:2px solid transparent;padding:8px 20px;margin-bottom:-1px;font-size:14px;font-weight:500;color:#718096;cursor:pointer;transition:color .15s,border-color .15s}
+.cp-tab:hover{color:#e2e8f0}
+.cp-tab-active{color:#5CC6FF;border-bottom-color:#5CC6FF}
+
+/* ─── Page header (home + category pages) ────────────────── */
+.calc-page-header{background-color:var(--secondary-color);border-radius:10px;padding:20px;margin-bottom:20px}
+.calc-page-header h1{font-size:24px;font-weight:600;color:var(--white);margin:0 0 6px;line-height:1.3}
+.calc-page-header p{font-size:15px;color:var(--das-text);margin:0;line-height:1.6}
+
+/* ─── Home: category cards ──────────────────────────────── */
+.calc-cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.calc-cat-card{background-color:var(--secondary-color);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:18px 20px;text-decoration:none;display:block;transition:border-color .18s,transform .18s}
+.calc-cat-card:hover{border-color:rgba(92,198,255,.4);transform:translateY(-2px)}
+.calc-cat-name{font-size:15px;font-weight:600;color:var(--white);margin:0 0 6px}
+.calc-cat-desc{font-size:15px;color:var(--das-text);margin:0 0 10px;line-height:1.6}
+.calc-cat-count{font-size:12px;color:#5CC6FF;font-weight:500}
+
+
+/* ─── Category: tool bullet list ───────────────────────── */
+.calc-tool-list{list-style:disc;padding-left:22px;margin:0;columns:2;column-gap:40px}
+.calc-tool-list li{padding:5px 0;break-inside:avoid;color:#5CC6FF}
+.calc-tool-link{color:#5CC6FF;text-decoration:none;font-weight:500;font-size:14px;line-height:1.4;transition:color .15s}
+.calc-tool-link:hover{color:#85FFC4;text-decoration:underline}
+.calc-empty{font-size:14px;color:var(--das-text);padding:4px 0}
+@media(max-width:600px){.calc-tool-list{columns:1}}
+
+/* ─── Input layout ──────────────────────────────────────── */
+.cp-fields{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:20px}
+.field-group{box-sizing:border-box}
+.calc-field-half{width:calc(50% - 7px)}
+.calc-field-third{width:calc(33.333% - 10px)}
+.calc-field-full{width:100%}
+.field-hidden{display:none!important}
+
+/* Labels — match data-label sizing from stock_detail.css */
+.cp-label{display:block;font-size:13px;font-weight:500;color:var(--das-text);margin-bottom:6px}
+.cp-required{color:#FF5993}
+
+/* Text / number inputs */
+.cp-input{
+    width:100%;
+    padding:9px 12px;
+    background-color:var(--primary-color);
+    border:1px solid rgba(255,255,255,.1)!important;
+    border-radius:8px;
+    color:var(--white)!important;
+    font-size:14px;
+    font-weight:500;
+    box-sizing:border-box;
+    transition:border-color .2s;
+}
+.cp-input:focus{border-color:#5CC6FF!important;box-shadow:0 0 0 2px rgba(92,198,255,.15);outline:none}
+.cp-input option{background:var(--secondary-color);color:var(--white)}
+
+/* Prefix / suffix addon wrapper */
+.cp-input-wrap{
+    display:flex;
+    align-items:center;
+    background-color:var(--primary-color);
+    border:1px solid rgba(255,255,255,.1)!important;
+    border-radius:8px;
+    overflow:hidden;
+    transition:border-color .2s;
+}
+.cp-input-wrap:focus-within{border-color:#5CC6FF!important;box-shadow:0 0 0 2px rgba(92,198,255,.15)}
+.cp-addon{padding:9px 11px;font-size:12px;font-weight:600;color:var(--das-text);background:rgba(255,255,255,.04);white-space:nowrap;flex-shrink:0}
+.cp-addon-prefix{border-right:1px solid rgba(255,255,255,.08)}
+.cp-addon-suffix{border-left:1px solid rgba(255,255,255,.08)}
+.cp-input-bare{flex:1;padding:9px 12px;background:transparent;border:none!important;color:var(--white)!important;font-size:14px;font-weight:500;min-width:0;width:100%}
+.cp-input-bare:focus{outline:none}
+
+/* Radio / checkbox pills */
+.cp-radio-group,.cp-checkbox-group{display:flex;flex-wrap:wrap;gap:7px}
+.cp-pill-label{cursor:pointer}
+.cp-pill-label span{display:inline-block;padding:6px 14px;background:var(--primary-color);border:1px solid rgba(255,255,255,.1);border-radius:6px;font-size:13px;color:var(--das-text);transition:all .18s}
+.cp-pill-label input:checked+span{background:rgba(92,198,255,.12);border-color:#5CC6FF;color:#5CC6FF}
+
+.cp-checkbox-single{display:flex;align-items:center;gap:9px;cursor:pointer;color:var(--das-text);font-size:13px}
+.cp-checkbox-single input{width:15px;height:15px;accent-color:#5CC6FF;border:none!important;flex-shrink:0}
+
+/* Range slider */
+.cp-range-wrap{display:flex;align-items:center;gap:10px}
+.cp-range{flex:1;accent-color:#5CC6FF;cursor:pointer;height:4px}
+.cp-range-val{font-size:13px;font-weight:700;color:#5CC6FF;min-width:65px;text-align:right;white-space:nowrap}
+.cp-range-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--das-text);margin-top:3px}
+
+.cp-color-input{width:100%;height:38px;border-radius:8px;border:1px solid rgba(255,255,255,.1)!important;cursor:pointer;background:var(--primary-color)}
+.cp-help{font-size:12px;color:var(--das-text);margin-top:4px}
+
+/* ─── Divider ────────────────────────────────────────────── */
+.cp-divider{border:none;border-top:1px solid rgba(255,255,255,.07);margin:0 0 18px}
+
+/* ─── Results — font sizes match data-value / data-label ── */
+.cp-results-label{font-size:12px;font-weight:600;color:var(--das-text);margin:0 0 12px;text-transform:uppercase;letter-spacing:.6px}
+
+.cp-primary-result{
+    background:linear-gradient(135deg,rgba(92,198,255,.08) 0%,rgba(92,198,255,.03) 100%);
+    border:1px solid rgba(92,198,255,.2);
+    border-radius:10px;
+    padding:16px 18px;
+    margin-bottom:14px;
+}
+.cp-primary-result-label{font-size:12px;font-weight:600;color:#5CC6FF;margin:0 0 5px;text-transform:uppercase;letter-spacing:.5px}
+.cp-primary-result-value{font-size:28px;font-weight:700;color:var(--white);margin:0;word-break:break-all;line-height:1.2}
+
+.cp-secondary-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px;margin-bottom:14px}
+.cp-result-card{background:var(--primary-color);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:12px 14px}
+.cp-result-card-label{font-size:12px;color:var(--das-text);margin:0 0 4px;font-weight:500}
+.cp-result-card-value{font-size:16px;font-weight:600;color:var(--white);margin:0;word-break:break-all}
+
+.cp-color-rose{color:#FF5993!important}
+.cp-color-emerald{color:#52CA96!important}
+.cp-color-indigo{color:#BC85FF!important}
+.cp-color-amber{color:#FFB347!important}
+.cp-color-cyan{color:#5CC6FF!important}
+
+/* ─── Chart (fixed 200×200 inside .cp-chart-wrap) ────────── */
+.cp-chart-section{background:var(--primary-color);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:16px;margin-bottom:14px}
+.cp-chart-title{font-size:12px;font-weight:600;color:var(--das-text);margin:0 0 12px;text-transform:uppercase;letter-spacing:.5px}
+.cp-chart-inner{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
+.cp-chart-wrap{width:200px;height:200px;flex-shrink:0;position:relative;border-radius:50%;background:rgba(255,255,255,.04)}
+.cp-chart-legend{display:flex;flex-direction:column;gap:9px;min-width:120px}
+
+/* ─── Results table ──────────────────────────────────────── */
+.cp-table-section{background:var(--primary-color);border:1px solid rgba(255,255,255,.07);border-radius:8px;overflow:hidden;margin-bottom:14px}
+.cp-table-hdr{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.07)}
+.cp-table-title{font-size:13px;font-weight:600;color:var(--white);margin:0}
+.cp-table-export{font-size:12px;color:#5CC6FF;background:none;border:none!important;cursor:pointer;padding:0}
+.cp-table-export:hover{color:#85FFC4}
+.cp-table-scroll{overflow-x:auto}
+.cp-table{width:100%;border-collapse:collapse;font-size:13px}
+.cp-table thead{background:rgba(255,255,255,.04)}
+.cp-table th{padding:8px 12px;text-align:left;font-weight:600;color:var(--das-text);white-space:nowrap;border:none}
+.cp-table td{padding:8px 12px;color:var(--white);border-top:1px solid rgba(255,255,255,.05);border-left:none;border-right:none;border-bottom:none}
+.cp-table tr:hover td{background:rgba(255,255,255,.025)}
+.cp-pagination{display:flex;justify-content:space-between;align-items:center;padding:8px 14px;border-top:1px solid rgba(255,255,255,.07);font-size:12px;color:var(--das-text)}
+.cp-page-btn{padding:3px 10px;font-size:12px;background:var(--secondary-color);border:1px solid rgba(255,255,255,.1)!important;border-radius:6px;color:var(--das-text);cursor:pointer;margin-left:5px}
+.cp-page-btn:disabled{opacity:.35;cursor:not-allowed}
+.cp-page-btn:not(:disabled):hover{border-color:#5CC6FF!important;color:#5CC6FF}
+
+/* ─── Action buttons ─────────────────────────────────────── */
+.cp-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.cp-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 15px;border-radius:7px;font-size:13px;font-weight:600;cursor:pointer;border:1px solid transparent;transition:all .18s;line-height:1}
+.cp-btn-reset{background:var(--primary-color);border-color:rgba(255,255,255,.12)!important;color:var(--das-text)}
+.cp-btn-reset:hover{border-color:rgba(255,255,255,.25)!important;color:var(--white)}
+.cp-btn-copy{background:rgba(92,198,255,.1);border-color:rgba(92,198,255,.35)!important;color:#5CC6FF}
+.cp-btn-copy:hover{background:rgba(92,198,255,.18)}
+.cp-btn-share{background:rgba(133,255,196,.08);border-color:rgba(133,255,196,.3)!important;color:#85FFC4}
+.cp-btn-share:hover{background:rgba(133,255,196,.15)}
+
+/* ─── SEO content block ──────────────────────────────────── */
+/* Uses data-card from stock_detail.css as the wrapper.
+   Body text set to 15px matching stock_detail's
+   .company-description-header convention.                  */
+.cp-content h2{font-size:18px;font-weight:600;color:var(--white);margin:0 0 10px}
+.cp-content h3{font-size:15px;font-weight:600;color:#c0c8d8;margin:16px 0 8px}
+.cp-content p{font-size:15px;color:var(--das-text);line-height:1.8;margin:0 0 10px}
+.cp-content ul,.cp-content ol{font-size:15px;color:var(--das-text);padding-left:18px;line-height:1.8;margin:0 0 10px;list-style-type:disc}
+.cp-content ol{list-style-type:decimal}
+.cp-content a{color:#5CC6FF}
+.cp-content table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0}
+.cp-content th{background:var(--primary-color);color:var(--das-text);padding:8px 11px;text-align:left;border:1px solid rgba(255,255,255,.07)}
+.cp-content td{color:var(--white);padding:8px 11px;border:1px solid rgba(255,255,255,.05)}
+
+/* ─── FAQ accordion ──────────────────────────────────────── */
+.cp-faq{border-bottom:1px solid rgba(255,255,255,.07);padding:14px 0}
+.cp-faq:last-child{border-bottom:none}
+.cp-faq-q{font-size:15px;font-weight:600;color:var(--white);margin:0 0 6px;line-height:1.4}
+.cp-faq-a{font-size:15px;color:var(--das-text);line-height:1.8;margin:0}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+@media(max-width:700px){
+    .calc-field-half,.calc-field-third{width:100%}
+    .cp-primary-result-value{font-size:22px}
+    .cp-chart-inner{flex-direction:column;gap:16px}
+    .cp-chart-wrap{width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.04)}
+    .calc-tools-grid{grid-template-columns:1fr}
+    .calc-tool-item{border-right:none}
+}
