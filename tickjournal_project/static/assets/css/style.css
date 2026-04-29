@@ -487,7 +487,7 @@ footer{
 }
 @media screen and (max-width: 769px){
     nav {
-        display: none; 
+        display: none;
         background-color: var(--secondary-color);
         border-radius: 8px;
         height: 100%;
@@ -507,7 +507,7 @@ footer{
         margin: 0;
     }
     nav.active {
-        display: block; 
+        display: block;
     }
     .gradient-box{
         background-image: var(--color-shadow);
@@ -519,10 +519,13 @@ footer{
         border-radius: 4px;
         width: 100%;
     }
+    .header-container{
+        position: relative;
+    }
     .shadow-bg.active .shodow-active{
-        position: fixed;
+        position: absolute;
         background-image: var(--color-shadow);
-        top: 95px; 
+        top: 58px;
         right: 10px;
         z-index: 10;
         width: 226px;
