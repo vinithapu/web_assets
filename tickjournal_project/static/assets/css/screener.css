@@ -1,5 +1,10 @@
 /* Stock Screener CSS Styles */
 
+.cp-breadcrumb{display:flex;align-items:center;flex-wrap:wrap;gap:4px;font-size:12px;color:var(--das-text);margin-bottom:16px}
+.cp-breadcrumb a{color:#5CC6FF;text-decoration:none;transition:color .15s}
+.cp-breadcrumb a:hover{color:#85FFC4}
+.cp-breadcrumb .sep{color:var(--das-text);margin:0 2px}
+
 .dashboard-body {
     height: 100vh;
     overflow: hidden;
@@ -31,7 +36,7 @@
 .search-input-wrapper {
     flex: 1;
     position: relative;
-    height: 48px;
+    height: 54px;
     background-color: var(--primary-color);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 6px;
@@ -55,7 +60,7 @@
 }
 
 .search-button {
-    height: 48px;
+    height: 54px;
     background-image: var(--color-shadow);
     border: none;
     border-radius: 6px;
@@ -185,6 +190,12 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .header {
+        height: auto !important;
+        min-height: unset !important;
+        margin-bottom: 10px;
+    }
+
     .screener-hero {
         padding: 20px;
     }
@@ -193,8 +204,20 @@
         flex-direction: column;
     }
 
+    .search-input-wrapper {
+        height: 76px;
+        padding: 0 18px;
+    }
+
+    .search-input {
+        height: 76px;
+        font-size: 18px;
+    }
+
     .search-button {
         width: 100%;
+        height: 60px;
+        font-size: 18px;
     }
 
     .screener-results-container {
