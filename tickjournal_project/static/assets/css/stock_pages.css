@@ -4393,18 +4393,19 @@ section -->
 /* ═══ Intrinsic Value ═══ */
 
 .intrinsic-hero {
-            background: linear-gradient(135deg, #1a1d29 0%, #2d1b69 50%, #1a1d29 100%);
-            border-radius: 15px;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
             padding: 30px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             text-align: center;
         }
 
         .company-header h1 {
             font-size: 28px;
-            font-weight: 800;
+            font-weight: 700;
             color: var(--white);
             margin-bottom: 8px;
+            line-height: 1.2;
         }
 
         .company-info {
@@ -4425,28 +4426,33 @@ section -->
             text-decoration: none;
         }
 
-        .price-info {
+        .intrinsic-price-info {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 40px;
             margin-bottom: 20px;
             flex-wrap: wrap;
         }
 
-        .price-item {
+        .intrinsic-price-item {
             text-align: center;
         }
 
-        .price-label {
+        .intrinsic-label {
             font-size: 14px;
             color: var(--das-text);
+            text-transform: uppercase;
+            letter-spacing: 1px;
             margin-bottom: 5px;
         }
 
-        .price-value {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--white);
+        .intrinsic-value {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(45deg, #5CC6FF, #85FFC4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .upside-badge {
@@ -5404,6 +5410,7 @@ section -->
 
         /* Statistics Section */
         .statistics-section {
+            display: block;
             background-color: var(--secondary-color);
             border-radius: 10px;
             padding: 20px;
@@ -6433,9 +6440,10 @@ section -->
         }
 
         .marketcap-description {
-            color: var(--white);
-            line-height: 1.6;
-            opacity: 0.9;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.8;
+            margin-bottom: 20px;
         }
 
         .company-link {
