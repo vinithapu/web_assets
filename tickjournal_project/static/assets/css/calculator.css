@@ -204,6 +204,10 @@
 .cp-btn-copy:hover{background:rgba(92,198,255,.18)}
 .cp-btn-share{background:rgba(133,255,196,.08);border-color:rgba(133,255,196,.3)!important;color:#85FFC4}
 .cp-btn-share:hover{background:rgba(133,255,196,.15)}
+.cp-btn-download{background:linear-gradient(45deg,#52CA96,#85FFC4);color:var(--primary-color);border:none!important;border-radius:8px;text-decoration:none;font-size:16px;font-weight:700;padding:14px 36px;transition:all .2s ease}
+.cp-btn-download:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(82,202,150,.35);color:var(--primary-color)}
+.cp-download-section{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:16px 0 8px}
+.cp-download-label{font-size:14px;color:var(--das-text);margin:0}
 
 /* ─── SEO content block ──────────────────────────────────── */
 /* Uses data-card from stock_detail.css as the wrapper.
