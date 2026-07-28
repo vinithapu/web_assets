@@ -137,6 +137,16 @@ nav ul li a{
     color: #0B101A;
     margin-top: 10px;
 }
+.main-heading p a{
+    display: inline;
+    height: auto;
+    padding: 0;
+    margin-top: 0;
+    background-image: none;
+    color: inherit;
+    font-weight: 500;
+    text-decoration: underline;
+}
 .scr-shorts{
     border-radius: 10px;
     width: 100%;
